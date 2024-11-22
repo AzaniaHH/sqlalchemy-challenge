@@ -15,7 +15,7 @@ engine = create_engine("sqlite:///SurfsUp/Resources/hawaii.sqlite")
 Base = automap_base()
 
 # reflect the tables
-Base.prepare(engine, reflect=True)
+Base.prepare(engine, autoload_with=engine)
 
 # Save references to each table
 Measurement = Base.classes.measurement
@@ -28,6 +28,8 @@ session = Session(engine)
 #################################################
 # Flask Setup
 #################################################
+a
+pp = Flask(__name__)
 
 
 #################################################
