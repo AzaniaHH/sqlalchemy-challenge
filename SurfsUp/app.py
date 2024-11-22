@@ -9,13 +9,13 @@ from datetime import datetime, timedelta
 # Database Setup
 #################################################
 
-engine = create_engine("sqlite:///SurfsUp/Resources/hawaii.sqlite")
+engine = create_engine("sqlite:////Users/zan/Desktop/Data Analytics Course/sqlalchemy-challenge/SurfsUp/Resources/hawaii.sqlite")
 
 # reflect an existing database into a new model
 Base = automap_base()
 
 # reflect the tables
-Base.prepare(engine, autoload_with=engine)
+Base.prepare(autoload_with=engine)
 
 # Save references to each table
 Measurement = Base.classes.measurement
